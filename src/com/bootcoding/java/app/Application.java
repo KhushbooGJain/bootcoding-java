@@ -1,7 +1,9 @@
 package com.bootcoding.java.app;
 
 import com.bootcoding.java.model.Customer;
+import com.bootcoding.java.service.CustomerService;
 import com.bootcoding.java.service.OrderService;
+import com.bootcoding.java.service.VendorService;
 
 public class Application {
 
@@ -27,6 +29,13 @@ public class Application {
 
         OrderService orderService = new OrderService();
         orderService.createOrder();   //createOrder method called
+
+        CustomerService  customerService = new CustomerService();
+        customerService.registerCustomer();
+
+        VendorService vendorService =new VendorService();
+        vendorService.registerVendor();
+
 
     }
 }

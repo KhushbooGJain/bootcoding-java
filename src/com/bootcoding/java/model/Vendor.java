@@ -84,4 +84,17 @@ public class Vendor {
     double longitude;
     Date registrationDate;
     Date modifiedDate;
+
+    public void print() {
+        System.out.println(getCity());
+        System.out.println(getLatitude());
+        System.out.println(getLongitude());
+        System.out.println(getName());
+        System.out.println(getModifiedDate());
+        System.out.println(getId());
+        System.out.println(getRegistrationDate());
+        System.out.println(getState());
+        System.out.println(getClass());
+        System.out.println("Vendor has been registered successfully");
+    }
 }
