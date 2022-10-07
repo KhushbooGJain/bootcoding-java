@@ -1,11 +1,12 @@
 package com.bootcoding.java.app;
 
 import com.bootcoding.java.model.Customer;
+import com.bootcoding.java.service.OrderService;
 
 public class Application {
 
     public static void main(String[] args) {
-        Customer Khushboo = new Customer();
+        Customer Khushboo = new Customer();  //customer object
         Khushboo.setName("Khushboo Jain");
         Khushboo.setCity("Nagpur");
         Khushboo.setDeliveryAddress("Nagpur, Maharashtra");
@@ -24,6 +25,8 @@ public class Application {
         Himesh.setEmailId("himeshj320@gmail.com");
         Himesh.print();
 
+        OrderService orderService = new OrderService();
+        orderService.createOrder();   //createOrder method called
 
     }
 }
