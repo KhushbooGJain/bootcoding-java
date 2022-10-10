@@ -1,10 +1,14 @@
 package com.bootcoding.java.app;
 
 import com.bootcoding.java.dao.DAOService;
+import com.bootcoding.java.dao.OrderDAO;
 import com.bootcoding.java.model.Customer;
+import com.bootcoding.java.model.Order;
 import com.bootcoding.java.service.CustomerService;
 import com.bootcoding.java.service.OrderService;
 import com.bootcoding.java.service.VendorService;
+
+import java.util.List;
 
 public class Application {
 
@@ -14,6 +18,10 @@ public class Application {
         dbService.printCustomerData();
         System.out.println("********************************************************");
         dbService.printVendorData();
+        System.out.println("********************************************************");
+        OrderDAO orderDAO = new OrderDAO();
+        List<Order> allOders=orderDAO.getAllOrders();
+
 //
 //        Customer Khushboo = new Customer();  //customer object
 //        Khushboo.setName("Khushboo Jain");
