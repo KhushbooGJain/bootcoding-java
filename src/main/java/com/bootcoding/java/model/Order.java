@@ -1,5 +1,6 @@
 package com.bootcoding.java.model;
 
+import java.util.Date;
 import java.util.List;
 
 public class Order {
@@ -66,6 +67,16 @@ public class Order {
     private String deliveryAddress;
     private OrderStatus status;
     private List<MenuItem> menuItems;
+
+    private Date orderDate;
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
+    }
 
     public void print(){
         System.out.println(getId());
